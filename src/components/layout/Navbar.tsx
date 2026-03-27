@@ -36,13 +36,14 @@ export function Navbar() {
           </Link>
           <Link
             href="/omniskills"
-            className={`text-xs font-bold px-2.5 py-1 rounded-full border transition-colors ${
+            className={`flex items-center gap-1.5 text-sm font-bold px-3.5 py-1.5 rounded-full border-2 transition-all ${
               pathname.startsWith("/omniskills")
-                ? "bg-purple-600 text-white border-purple-600"
-                : "border-purple-500/50 text-purple-400 hover:bg-purple-600 hover:text-white hover:border-purple-600"
+                ? "bg-purple-600 text-white border-purple-600 shadow-lg shadow-purple-600/30"
+                : "border-purple-500 text-purple-500 hover:bg-purple-600 hover:text-white hover:border-purple-600 hover:shadow-lg hover:shadow-purple-600/30"
             }`}
           >
-            Skills
+            <Sparkles className="h-3.5 w-3.5" />
+            OmniSkills
           </Link>
         </div>
 
@@ -99,6 +100,14 @@ export function Navbar() {
       {mobileOpen && (
         <div className="md:hidden border-t bg-background p-4">
           <nav className="flex flex-col gap-3">
+            <Link
+              href="/omniskills"
+              className="flex items-center gap-2 text-sm font-bold py-2 text-purple-500"
+              onClick={() => setMobileOpen(false)}
+            >
+              <Sparkles className="h-4 w-4" />
+              OmniSkills
+            </Link>
             <button
               onClick={openAskOmni}
               className="text-sm font-medium py-2 text-left flex items-center gap-2"
