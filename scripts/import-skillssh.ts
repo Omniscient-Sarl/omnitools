@@ -198,7 +198,7 @@ function mapCategories(skillName: string, repo: string): string[] {
   if (cats.length === 0) cats.push("productivity");
 
   // Deduplicate
-  return [...new Set(cats)];
+  return Array.from(new Set(cats));
 }
 
 // ── Tagline generator ───────────────────────────────────────────────
