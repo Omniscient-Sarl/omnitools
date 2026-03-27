@@ -6,7 +6,7 @@ import { createClient } from "@/lib/supabase/client"
 import { Button } from "@/components/ui/button"
 import { Skeleton } from "@/components/ui/skeleton"
 import { Link } from "@/i18n/routing"
-import { Send, User, ExternalLink, ArrowRight, X, LogIn, Zap } from "lucide-react"
+import { Send, User, ExternalLink, X, LogIn, Zap } from "lucide-react"
 
 interface Recommendation {
   name: string

@@ -1,10 +1,9 @@
-import { useLocale } from "next-intl"
 import { createOmniskillsServiceClient } from "@/lib/supabase/omniskills-server"
 import { Link } from "@/i18n/routing"
 
 export default async function SkillCategoriesPage() {
   const supabase = createOmniskillsServiceClient()
-  const locale = "en" // Will be resolved by middleware
+
 
   const { data: categories } = await supabase
     .from("categories")

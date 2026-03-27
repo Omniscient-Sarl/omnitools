@@ -1,5 +1,4 @@
 import { useTranslations } from "next-intl"
-import { Button } from "@/components/ui/button"
 import { ArrowRight, CheckCircle } from "lucide-react"
 
 export default function EnterprisePage() {

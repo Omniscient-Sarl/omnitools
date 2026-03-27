@@ -1,9 +1,7 @@
-import { useTranslations, useLocale } from "next-intl"
 import { createOmniskillsServiceClient } from "@/lib/supabase/omniskills-server"
 import { SkillCard } from "@/components/omniskills/SkillCard"
 import { SkillHero } from "@/components/omniskills/SkillHero"
 import { Link } from "@/i18n/routing"
-import { ArrowLeft } from "lucide-react"
 
 export default async function OmniskillsPage() {
   const supabase = createOmniskillsServiceClient()
