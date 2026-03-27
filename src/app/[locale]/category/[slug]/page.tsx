@@ -1,15 +1,10 @@
-import { createClient } from "@supabase/supabase-js"
+import { getServiceClient } from "@/lib/supabase/service"
 import { getLocale } from "next-intl/server"
 import { notFound } from "next/navigation"
 import { ToolCard } from "@/components/ToolCard"
 import { SearchBar } from "@/components/SearchBar"
 import { CategoryFilters } from "@/components/CategoryFilters"
 import type { Metadata } from "next"
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_KEY!
-)
 
 export async function generateMetadata({
   params,
@@ -19,7 +14,7 @@ export async function generateMetadata({
   const { slug } = await params
   const locale = await getLocale()
 
-  const { data: category } = await supabase
+  const { data: category } = await getServiceClient()
     .from("categories")
     .select("*")
     .eq("slug", slug)
@@ -41,8 +36,8 @@ export async function generateMetadata({
 
 async function getCategoryData(slug: string) {
   const [categoryRes, toolsRes] = await Promise.all([
-    supabase.from("categories").select("*").eq("slug", slug).single(),
-    supabase
+    getServiceClient().from("categories").select("*").eq("slug", slug).single(),
+    getServiceClient()
       .from("tools")
       .select(
         "id, name, slug, tagline, logo_url, pricing_type, category, categories, ph_votes, is_new, is_trending"

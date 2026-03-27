@@ -1,10 +1,5 @@
 import { NextRequest, NextResponse } from "next/server"
-import { createClient } from "@supabase/supabase-js"
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_KEY!
-)
+import { getServiceClient } from "@/lib/supabase/service"
 
 const PH_API_URL = "https://api.producthunt.com/v2/api/graphql"
 const PH_TOKEN = process.env.PRODUCTHUNT_API_TOKEN!
@@ -100,7 +95,7 @@ export async function GET(request: NextRequest) {
         is_trending: p.votesCount > 100,
       }
 
-      const { error } = await supabase
+      const { error } = await getServiceClient()
         .from("tools")
         .upsert(tool, { onConflict: "ph_id" })
 

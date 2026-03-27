@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl"
-import { createClient } from "@supabase/supabase-js"
+import { getServiceClient } from "@/lib/supabase/service"
 import { HeroChatBot } from "@/components/HeroChatBot"
 import { RotatingHero } from "@/components/RotatingHero"
 import { ToolCard } from "@/components/ToolCard"
@@ -19,11 +19,7 @@ const trendingTags = [
 ]
 
 async function getTopTools() {
-  const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.SUPABASE_SERVICE_KEY!
-  )
-  const { data } = await supabase
+  const { data } = await getServiceClient()
     .from("tools")
     .select("id, name, slug, tagline, logo_url, pricing_type, category, categories, ph_votes, is_new, is_trending")
     .order("ph_votes", { ascending: false })

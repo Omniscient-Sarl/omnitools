@@ -1,10 +1,5 @@
 import { NextRequest, NextResponse } from "next/server"
-import { createClient } from "@supabase/supabase-js"
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_KEY!
-)
+import { getServiceClient } from "@/lib/supabase/service"
 
 export async function GET(request: NextRequest) {
   try {
@@ -18,7 +13,7 @@ export async function GET(request: NextRequest) {
     }
 
     // Text search using pg_trgm similarity
-    let dbQuery = supabase
+    let dbQuery = getServiceClient()
       .from("tools")
       .select(
         "id, name, slug, tagline, logo_url, pricing_type, category, categories, ph_votes, is_new, is_trending"

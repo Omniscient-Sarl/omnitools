@@ -1,4 +1,4 @@
-import { createClient } from "@supabase/supabase-js"
+import { getServiceClient } from "@/lib/supabase/service"
 import { ToolCard } from "@/components/ToolCard"
 import { SearchBar } from "@/components/SearchBar"
 import { Badge } from "@/components/ui/badge"
@@ -9,16 +9,11 @@ export const metadata: Metadata = {
   description: "Discover the latest AI tools added this week. Stay ahead with fresh AI tools from Product Hunt.",
 }
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_KEY!
-)
-
 async function getNewTools() {
   const oneWeekAgo = new Date()
   oneWeekAgo.setDate(oneWeekAgo.getDate() - 7)
 
-  const { data } = await supabase
+  const { data } = await getServiceClient()
     .from("tools")
     .select("id, name, slug, tagline, logo_url, pricing_type, category, categories, ph_votes, is_new, is_trending")
     .gte("created_at", oneWeekAgo.toISOString())

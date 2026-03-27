@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server"
-import { createClient } from "@supabase/supabase-js"
+import { getServiceClient } from "@/lib/supabase/service"
 import { chatWithTools } from "@/lib/openrouter"
 import {
   authenticatedLimiter,
@@ -7,11 +7,6 @@ import {
   getCachedResponse,
   setCachedResponse,
 } from "@/lib/upstash"
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_KEY!
-)
 
 export async function POST(request: NextRequest) {
   try {
@@ -75,15 +70,15 @@ export async function POST(request: NextRequest) {
       .join(",")
 
     const toolsResult = orConditions
-      ? await supabase.from("tools").select(selectCols).or(orConditions).order("ph_votes", { ascending: false }).limit(20)
-      : await supabase.from("tools").select(selectCols).order("ph_votes", { ascending: false }).limit(15)
+      ? await getServiceClient().from("tools").select(selectCols).or(orConditions).order("ph_votes", { ascending: false }).limit(20)
+      : await getServiceClient().from("tools").select(selectCols).order("ph_votes", { ascending: false }).limit(15)
 
     let tools = toolsResult.data
     let searchError = toolsResult.error
 
     // Fallback: if too few results, supplement with top tools
     if (!tools || tools.length < 10) {
-      const fallback = await supabase.from("tools").select(selectCols).order("ph_votes", { ascending: false }).limit(15)
+      const fallback = await getServiceClient().from("tools").select(selectCols).order("ph_votes", { ascending: false }).limit(15)
       if (fallback.data) {
         const existingSlugs = new Set((tools || []).map((t) => t.slug))
         const extra = fallback.data.filter((t) => !existingSlugs.has(t.slug))
@@ -123,7 +118,7 @@ export async function POST(request: NextRequest) {
     // Enrich recommendations with the tool's external URL
     if (response.recommendations.length > 0) {
       const slugs = response.recommendations.map((r) => r.slug)
-      const { data: urlData } = await supabase
+      const { data: urlData } = await getServiceClient()
         .from("tools")
         .select("slug, url")
         .in("slug", slugs)

@@ -1,4 +1,4 @@
-import { createClient } from "@supabase/supabase-js"
+import { getServiceClient } from "@/lib/supabase/service"
 import { getLocale, getTranslations } from "next-intl/server"
 import { Link } from "@/i18n/routing"
 import {
@@ -7,11 +7,6 @@ import {
   Shield, Megaphone, Zap, Search, Type, Globe, Video, PenTool,
 } from "lucide-react"
 import type { Metadata } from "next"
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_KEY!
-)
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   mic: Mic, settings: Settings, "message-circle": MessageCircle,
@@ -33,13 +28,13 @@ export default async function CategoriesPage() {
   const locale = await getLocale()
   const t = await getTranslations("categories")
 
-  const { data: categories } = await supabase
+  const { data: categories } = await getServiceClient()
     .from("categories")
     .select("slug, name_en, name_fr, name_ja, name_zh, description_en, description_fr, icon")
     .order("name_en")
 
   // Count tools per category
-  const { data: tools } = await supabase
+  const { data: tools } = await getServiceClient()
     .from("tools")
     .select("categories")
 

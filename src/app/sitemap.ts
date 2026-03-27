@@ -1,12 +1,7 @@
-import { createClient } from "@supabase/supabase-js"
+import { getServiceClient } from "@/lib/supabase/service"
 import type { MetadataRoute } from "next"
 
 const BASE_URL = "https://omnitool.ai"
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_KEY!
-)
 
 const locales = ["en", "fr", "ja", "zh"]
 
@@ -27,7 +22,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   // Category pages
-  const { data: categories } = await supabase
+  const { data: categories } = await getServiceClient()
     .from("categories")
     .select("slug")
 
@@ -45,7 +40,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   // Tool pages (high priority - 695+ pages per locale)
-  const { data: tools } = await supabase
+  const { data: tools } = await getServiceClient()
     .from("tools")
     .select("slug, updated_at")
 

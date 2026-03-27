@@ -1,4 +1,4 @@
-import { createClient } from "@supabase/supabase-js"
+import { getServiceClient } from "@/lib/supabase/service"
 import { getLocale } from "next-intl/server"
 import { notFound } from "next/navigation"
 import { OmniscientBanner } from "@/components/OmniscientBanner"
@@ -9,18 +9,13 @@ import { ExternalLink } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_KEY!
-)
-
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const { slug } = await params
-  const { data: tool } = await supabase
+  const { data: tool } = await getServiceClient()
     .from("tools")
     .select("name, tagline, description")
     .eq("slug", slug)
@@ -35,7 +30,7 @@ export async function generateMetadata({
 }
 
 async function getToolData(slug: string) {
-  const { data: tool } = await supabase
+  const { data: tool } = await getServiceClient()
     .from("tools")
     .select("*")
     .eq("slug", slug)
@@ -44,7 +39,7 @@ async function getToolData(slug: string) {
   if (!tool) return { tool: null, similar: [] }
 
   // Find similar tools (same category, exclude current)
-  const { data: similar } = await supabase
+  const { data: similar } = await getServiceClient()
     .from("tools")
     .select("id, name, slug, tagline, logo_url, pricing_type, category, categories, ph_votes, is_new, is_trending")
     .eq("category", tool.category)

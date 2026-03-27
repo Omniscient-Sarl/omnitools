@@ -1,14 +1,9 @@
 import { NextRequest, NextResponse } from "next/server"
-import { createClient } from "@supabase/supabase-js"
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_KEY!
-)
+import { getServiceClient } from "@/lib/supabase/service"
 
 // GET: list all submissions
 export async function GET() {
-  const { data, error } = await supabase
+  const { data, error } = await getServiceClient()
     .from("tool_submissions")
     .select("*")
     .order("created_at", { ascending: false })
@@ -29,7 +24,7 @@ export async function PATCH(request: NextRequest) {
     return NextResponse.json({ error: "Invalid request" }, { status: 400 })
   }
 
-  const { error } = await supabase
+  const { error } = await getServiceClient()
     .from("tool_submissions")
     .update({ status })
     .eq("id", id)

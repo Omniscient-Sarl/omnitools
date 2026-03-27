@@ -1,15 +1,10 @@
-import { createClient } from "@supabase/supabase-js"
+import { getServiceClient } from "@/lib/supabase/service"
 import { getLocale } from "next-intl/server"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ExternalLink } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_KEY!
-)
 
 export async function generateMetadata({
   params,
@@ -25,7 +20,7 @@ export async function generateMetadata({
 }
 
 async function getToolsForComparison(slugs: string[]) {
-  const { data } = await supabase
+  const { data } = await getServiceClient()
     .from("tools")
     .select("*")
     .in("slug", slugs)

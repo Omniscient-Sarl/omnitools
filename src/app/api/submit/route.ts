@@ -1,10 +1,5 @@
 import { NextRequest, NextResponse } from "next/server"
-import { createClient } from "@supabase/supabase-js"
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_KEY!
-)
+import { getServiceClient } from "@/lib/supabase/service"
 
 export async function POST(request: NextRequest) {
   try {
@@ -18,7 +13,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const { error } = await supabase.from("tool_submissions").insert({
+    const { error } = await getServiceClient().from("tool_submissions").insert({
       name: name.trim().slice(0, 200),
       url: url.trim().slice(0, 500),
       description: description?.trim().slice(0, 2000) || null,
