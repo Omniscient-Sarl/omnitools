@@ -1,0 +1,160 @@
+{
+  "nav": {
+    "home": "Home",
+    "categories": "Categories",
+    "new": "New",
+    "compare": "Compare",
+    "blog": "Blog",
+    "enterprise": "Enterprise",
+    "submit": "Submit a tool",
+    "login": "Sign in",
+    "logout": "Sign out",
+    "favorites": "Favorites",
+    "omniskills": "OmniSkills"
+  },
+  "hero": {
+    "title": "Which AI do you need?",
+    "subtitle": "Describe your project. OmniTool recommends the best AI tools in seconds.",
+    "placeholder": "Tell me about your project...",
+    "cta": "Find my tools"
+  },
+  "chatbot": {
+    "title": "AI Assistant",
+    "placeholder": "Describe what you need...",
+    "suggestions": [
+      "I want to generate images for my e-commerce store",
+      "I need to transcribe and subtitle YouTube videos",
+      "I want to automate my email marketing with AI",
+      "I need an AI coding assistant for my team"
+    ],
+    "remaining": "{count} questions remaining this hour",
+    "limitReached": "Limit reached. Come back in {minutes} minutes.",
+    "signUpPrompt": "Sign up for free to get 5 questions per hour",
+    "enterpriseCta": "Need to integrate AI into your business? Book a free call with Omniscient SARL",
+    "defaultReply": "Here are my recommendations:"
+  },
+  "tools": {
+    "viewTool": "View tool",
+    "visitSite": "Visit site",
+    "compare": "Compare",
+    "addFavorite": "Add to favorites",
+    "removeFavorite": "Remove from favorites",
+    "maxFavoritesJoke": "Save some love for yourself! 8 favorites max.",
+    "similar": "Similar tools",
+    "pricing": "Pricing",
+    "free": "Free",
+    "freemium": "Freemium",
+    "paid": "Paid",
+    "bestFor": "Best for",
+    "notGoodFor": "Not ideal for",
+    "integrations": "Integrations",
+    "inputTypes": "Accepts",
+    "outputTypes": "Produces"
+  },
+  "categories": {
+    "title": "AI Tool Categories",
+    "subtitle": "Browse all categories to find the perfect AI tool for your needs.",
+    "allTools": "All AI Tools",
+    "filterBy": "Filter by"
+  },
+  "compare": {
+    "title": "Compare AI Tools",
+    "selectTools": "Select 2-3 tools to compare",
+    "feature": "Feature",
+    "noSelection": "No tools selected yet"
+  },
+  "search": {
+    "placeholder": "Search 5000+ AI tools...",
+    "noResults": "No results found",
+    "trending": "Trending"
+  },
+  "auth": {
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "signInWithGoogle": "Continue with Google",
+    "orEmail": "Or with email",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "freeAccount": "Create a free account",
+    "benefit": "Get 5 AI recommendations per hour"
+  },
+  "enterprise": {
+    "title": "AI Integration for your business",
+    "subtitle": "Omniscient SARL helps companies integrate AI tools into their workflow",
+    "cta": "Start your AI transformation",
+    "services": [
+      "Custom AI tool selection & integration",
+      "Workflow automation with AI",
+      "Team training on AI tools",
+      "Ongoing support & optimization"
+    ]
+  },
+  "submit": {
+    "title": "Submit your AI tool",
+    "subtitle": "Get listed on OmniTool and reach thousands of potential users",
+    "name": "Tool name",
+    "url": "Website URL",
+    "description": "Description",
+    "yourName": "Your name",
+    "yourEmail": "Your email",
+    "send": "Submit",
+    "success": "Thank you! We'll review your submission shortly."
+  },
+  "footer": {
+    "builtBy": "OmniTool is a project by",
+    "omniscient": "Omniscient SARL",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "contact": "Contact"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "save": "Save",
+    "cancel": "Cancel"
+  },
+  "omniskills": {
+    "title": "Which AI skill do you need?",
+    "subtitle": "Describe your need. OmniSkills recommends the best Claude skills in seconds.",
+    "placeholder": "Describe what you want to automate...",
+    "heroSkills": [
+      "Generate React code automatically",
+      "Analyze CSV data in one click",
+      "Write professional emails",
+      "Automate code reviews",
+      "Create unit tests",
+      "Summarize PDF documents",
+      "Generate technical documentation",
+      "Translate code between languages"
+    ],
+    "allSkills": "All skills",
+    "popularSkills": "Popular skills",
+    "newSkills": "New skills",
+    "categories": "Categories",
+    "favorites": "Favorites",
+    "search": "Search skills",
+    "submit": "Submit a skill",
+    "installCount": "installs",
+    "viewSkill": "View skill",
+    "author": "Author",
+    "backToOmniTool": "Back to OmniTool",
+    "chatPlaceholder": "Describe what you want to do...",
+    "chatDefaultReply": "Here are the skills I recommend:",
+    "chatSignUpPrompt": "Sign in to ask more questions",
+    "chatLimitReached": "Limit reached. Try again in a few minutes.",
+    "suggestedQuestions": [
+      "I want to automate my code reviews",
+      "I need a skill to analyze data",
+      "I'm looking for a doc generation skill",
+      "How to automate my tests?"
+    ]
+  }
+}

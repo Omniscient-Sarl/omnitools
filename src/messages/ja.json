@@ -1,0 +1,160 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "categories": "カテゴリー",
+    "new": "新着",
+    "compare": "比較",
+    "blog": "ブログ",
+    "enterprise": "企業向け",
+    "submit": "ツールを登録",
+    "login": "ログイン",
+    "logout": "ログアウト",
+    "favorites": "お気に入り",
+    "omniskills": "OmniSkills"
+  },
+  "hero": {
+    "title": "どんなAIが必要ですか？",
+    "subtitle": "プロジェクトを説明してください。OmniToolが最適なAIツールを数秒で提案します。",
+    "placeholder": "プロジェクトについて教えてください...",
+    "cta": "ツールを探す"
+  },
+  "chatbot": {
+    "title": "AIアシスタント",
+    "placeholder": "必要なものを説明してください...",
+    "suggestions": [
+      "ECサイト用の画像を生成したい",
+      "YouTube動画の文字起こしと字幕付けをしたい",
+      "AIでメールマーケティングを自動化したい",
+      "チーム用のAIコーディングアシスタントが必要"
+    ],
+    "remaining": "今時間の残り質問数: {count}",
+    "limitReached": "制限に達しました。{minutes}分後にお試しください。",
+    "signUpPrompt": "無料アカウントで1時間5回まで質問できます",
+    "enterpriseCta": "AIをビジネスに導入したいですか？Omniscient SARLの無料相談を予約",
+    "defaultReply": "おすすめのツールはこちらです："
+  },
+  "tools": {
+    "viewTool": "ツールを見る",
+    "visitSite": "サイトを訪問",
+    "compare": "比較",
+    "addFavorite": "お気に入りに追加",
+    "removeFavorite": "お気に入りから削除",
+    "maxFavoritesJoke": "ちょっと落ち着いて！お気に入りは8個まで。",
+    "similar": "類似ツール",
+    "pricing": "料金",
+    "free": "無料",
+    "freemium": "フリーミアム",
+    "paid": "有料",
+    "bestFor": "最適な用途",
+    "notGoodFor": "不向きな用途",
+    "integrations": "連携",
+    "inputTypes": "入力",
+    "outputTypes": "出力"
+  },
+  "categories": {
+    "title": "AIツールカテゴリー",
+    "subtitle": "カテゴリーを閲覧して最適なAIツールを見つけましょう。",
+    "allTools": "全AIツール",
+    "filterBy": "絞り込み"
+  },
+  "compare": {
+    "title": "AIツールを比較",
+    "selectTools": "2-3個のツールを選んで比較",
+    "feature": "機能",
+    "noSelection": "ツールが選択されていません"
+  },
+  "search": {
+    "placeholder": "5000以上のAIツールを検索...",
+    "noResults": "結果なし",
+    "trending": "トレンド"
+  },
+  "auth": {
+    "signIn": "ログイン",
+    "signUp": "登録",
+    "signInWithGoogle": "Googleで続ける",
+    "orEmail": "またはメールで",
+    "email": "メール",
+    "password": "パスワード",
+    "forgotPassword": "パスワードを忘れた？",
+    "noAccount": "アカウントをお持ちでない？",
+    "hasAccount": "既にアカウントをお持ち？",
+    "freeAccount": "無料アカウントを作成",
+    "benefit": "1時間に5回のAI提案"
+  },
+  "enterprise": {
+    "title": "ビジネス向けAI統合",
+    "subtitle": "Omniscient SARLが企業のAIツール導入を支援します",
+    "cta": "AI変革を始める",
+    "services": [
+      "カスタムAIツールの選定と導入",
+      "AIによるワークフロー自動化",
+      "チームのAIツールトレーニング",
+      "継続的なサポートと最適化"
+    ]
+  },
+  "submit": {
+    "title": "AIツールを登録",
+    "subtitle": "OmniToolに掲載して数千人のユーザーにリーチ",
+    "name": "ツール名",
+    "url": "ウェブサイトURL",
+    "description": "説明",
+    "yourName": "お名前",
+    "yourEmail": "メールアドレス",
+    "send": "送信",
+    "success": "ありがとうございます！すぐに確認いたします。"
+  },
+  "footer": {
+    "builtBy": "OmniToolは",
+    "omniscient": "Omniscient SARL",
+    "legal": "法的情報",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "contact": "お問い合わせ"
+  },
+  "common": {
+    "loading": "読み込み中...",
+    "error": "エラーが発生しました",
+    "retry": "再試行",
+    "close": "閉じる",
+    "back": "戻る",
+    "next": "次へ",
+    "save": "保存",
+    "cancel": "キャンセル"
+  },
+  "omniskills": {
+    "title": "どのAIスキルが必要ですか？",
+    "subtitle": "ニーズを説明してください。OmniSkillsが最適なClaudeスキルを数秒で提案します。",
+    "placeholder": "自動化したいことを説明してください...",
+    "heroSkills": [
+      "Reactコードを自動生成",
+      "CSVデータをワンクリックで分析",
+      "プロフェッショナルなメールを作成",
+      "コードレビューを自動化",
+      "ユニットテストを作成",
+      "PDFドキュメントを要約",
+      "技術ドキュメントを生成",
+      "言語間でコードを変換"
+    ],
+    "allSkills": "全スキル",
+    "popularSkills": "人気スキル",
+    "newSkills": "新着スキル",
+    "categories": "カテゴリ",
+    "favorites": "お気に入り",
+    "search": "スキルを検索",
+    "submit": "スキルを投稿",
+    "installCount": "インストール",
+    "viewSkill": "スキルを見る",
+    "author": "作成者",
+    "backToOmniTool": "OmniToolに戻る",
+    "chatPlaceholder": "やりたいことを説明してください...",
+    "chatDefaultReply": "おすすめのスキルはこちらです：",
+    "chatSignUpPrompt": "もっと質問するにはサインイン",
+    "chatLimitReached": "制限に達しました。数分後に再試行してください。",
+    "suggestedQuestions": [
+      "コードレビューを自動化したい",
+      "データ分析のスキルが必要",
+      "ドキュメント生成スキルを探している",
+      "テストを自動化するには？"
+    ]
+  }
+}

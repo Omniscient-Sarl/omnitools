@@ -1,0 +1,160 @@
+{
+  "nav": {
+    "home": "首页",
+    "categories": "分类",
+    "new": "最新",
+    "compare": "对比",
+    "blog": "博客",
+    "enterprise": "企业",
+    "submit": "提交工具",
+    "login": "登录",
+    "logout": "退出",
+    "favorites": "收藏夹",
+    "omniskills": "OmniSkills"
+  },
+  "hero": {
+    "title": "你需要什么AI？",
+    "subtitle": "描述你的项目。OmniTool几秒内为你推荐最佳AI工具。",
+    "placeholder": "描述你的项目...",
+    "cta": "找到我的工具"
+  },
+  "chatbot": {
+    "title": "AI助手",
+    "placeholder": "描述你的需求...",
+    "suggestions": [
+      "我想为电商店铺生成产品图片",
+      "我需要为YouTube视频添加字幕",
+      "我想用AI自动化邮件营销",
+      "我的团队需要AI编程助手"
+    ],
+    "remaining": "本小时剩余提问次数: {count}",
+    "limitReached": "已达上限。请在{minutes}分钟后再试。",
+    "signUpPrompt": "免费注册，每小时5次提问",
+    "enterpriseCta": "需要将AI集成到您的业务中？预约Omniscient SARL免费咨询",
+    "defaultReply": "以下是我的推荐："
+  },
+  "tools": {
+    "viewTool": "查看工具",
+    "visitSite": "访问网站",
+    "compare": "对比",
+    "addFavorite": "收藏",
+    "removeFavorite": "取消收藏",
+    "maxFavoritesJoke": "留点爱给自己吧！最多收藏8个。",
+    "similar": "类似工具",
+    "pricing": "定价",
+    "free": "免费",
+    "freemium": "免费增值",
+    "paid": "付费",
+    "bestFor": "最适合",
+    "notGoodFor": "不太适合",
+    "integrations": "集成",
+    "inputTypes": "支持输入",
+    "outputTypes": "输出类型"
+  },
+  "categories": {
+    "title": "AI工具分类",
+    "subtitle": "浏览所有分类，找到最适合您需求的AI工具。",
+    "allTools": "全部AI工具",
+    "filterBy": "筛选"
+  },
+  "compare": {
+    "title": "对比AI工具",
+    "selectTools": "选择2-3个工具进行对比",
+    "feature": "功能",
+    "noSelection": "尚未选择工具"
+  },
+  "search": {
+    "placeholder": "搜索5000+AI工具...",
+    "noResults": "没有找到结果",
+    "trending": "热门"
+  },
+  "auth": {
+    "signIn": "登录",
+    "signUp": "注册",
+    "signInWithGoogle": "使用Google继续",
+    "orEmail": "或使用邮箱",
+    "email": "邮箱",
+    "password": "密码",
+    "forgotPassword": "忘记密码？",
+    "noAccount": "还没有账户？",
+    "hasAccount": "已有账户？",
+    "freeAccount": "创建免费账户",
+    "benefit": "每小时5次AI推荐"
+  },
+  "enterprise": {
+    "title": "企业AI集成",
+    "subtitle": "Omniscient SARL帮助企业集成AI工具",
+    "cta": "开启您的AI转型",
+    "services": [
+      "定制AI工具选择与集成",
+      "AI工作流自动化",
+      "团队AI工具培训",
+      "持续支持与优化"
+    ]
+  },
+  "submit": {
+    "title": "提交你的AI工具",
+    "subtitle": "在OmniTool上展示，触达数千潜在用户",
+    "name": "工具名称",
+    "url": "网站URL",
+    "description": "描述",
+    "yourName": "你的姓名",
+    "yourEmail": "你的邮箱",
+    "send": "提交",
+    "success": "谢谢！我们会尽快审核您的提交。"
+  },
+  "footer": {
+    "builtBy": "OmniTool 是",
+    "omniscient": "Omniscient SARL",
+    "legal": "法律信息",
+    "privacy": "隐私政策",
+    "terms": "使用条款",
+    "contact": "联系我们"
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "发生错误",
+    "retry": "重试",
+    "close": "关闭",
+    "back": "返回",
+    "next": "下一步",
+    "save": "保存",
+    "cancel": "取消"
+  },
+  "omniskills": {
+    "title": "你需要什么AI技能？",
+    "subtitle": "描述你的需求。OmniSkills几秒内为你推荐最佳Claude技能。",
+    "placeholder": "描述你想自动化的内容...",
+    "heroSkills": [
+      "自动生成React代码",
+      "一键分析CSV数据",
+      "撰写专业邮件",
+      "自动化代码审查",
+      "创建单元测试",
+      "总结PDF文档",
+      "生成技术文档",
+      "在语言之间转换代码"
+    ],
+    "allSkills": "所有技能",
+    "popularSkills": "热门技能",
+    "newSkills": "新技能",
+    "categories": "分类",
+    "favorites": "收藏",
+    "search": "搜索技能",
+    "submit": "提交技能",
+    "installCount": "次安装",
+    "viewSkill": "查看技能",
+    "author": "作者",
+    "backToOmniTool": "返回OmniTool",
+    "chatPlaceholder": "描述你想做什么...",
+    "chatDefaultReply": "以下是我推荐的技能：",
+    "chatSignUpPrompt": "登录以提问更多问题",
+    "chatLimitReached": "已达到限制。请几分钟后重试。",
+    "suggestedQuestions": [
+      "我想自动化代码审查",
+      "我需要一个数据分析技能",
+      "我在找文档生成技能",
+      "如何自动化测试？"
+    ]
+  }
+}

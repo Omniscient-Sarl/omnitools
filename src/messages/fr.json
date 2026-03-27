@@ -1,0 +1,160 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "categories": "Categories",
+    "new": "Nouveautes",
+    "compare": "Comparer",
+    "blog": "Blog",
+    "enterprise": "Entreprise",
+    "submit": "Soumettre un outil",
+    "login": "Se connecter",
+    "logout": "Se deconnecter",
+    "favorites": "Favoris",
+    "omniskills": "OmniSkills"
+  },
+  "hero": {
+    "title": "De quelle IA as-tu besoin ?",
+    "subtitle": "Decris ton projet. OmniTool te recommande les meilleurs outils IA en quelques secondes.",
+    "placeholder": "Decris ton projet...",
+    "cta": "Trouver mes outils"
+  },
+  "chatbot": {
+    "title": "Assistant IA",
+    "placeholder": "Decris ce dont tu as besoin...",
+    "suggestions": [
+      "Je veux generer des images pour ma boutique en ligne",
+      "Je dois transcrire et sous-titrer des videos YouTube",
+      "Je veux automatiser mon marketing email avec l'IA",
+      "J'ai besoin d'un assistant code IA pour mon equipe"
+    ],
+    "remaining": "{count} questions restantes cette heure",
+    "limitReached": "Limite atteinte. Revenez dans {minutes} minutes.",
+    "signUpPrompt": "Creez un compte gratuit pour 5 questions par heure",
+    "enterpriseCta": "Besoin d'integrer l'IA dans votre entreprise ? Prenez RDV gratuit avec Omniscient SARL",
+    "defaultReply": "Voici mes recommandations :"
+  },
+  "tools": {
+    "viewTool": "Voir l'outil",
+    "visitSite": "Visiter le site",
+    "compare": "Comparer",
+    "addFavorite": "Ajouter aux favoris",
+    "removeFavorite": "Retirer des favoris",
+    "maxFavoritesJoke": "Garde un peu d'amour pour toi ! 8 favoris max.",
+    "similar": "Outils similaires",
+    "pricing": "Tarification",
+    "free": "Gratuit",
+    "freemium": "Freemium",
+    "paid": "Payant",
+    "bestFor": "Ideal pour",
+    "notGoodFor": "Moins adapte pour",
+    "integrations": "Integrations",
+    "inputTypes": "Accepte",
+    "outputTypes": "Produit"
+  },
+  "categories": {
+    "title": "Categories d'outils IA",
+    "subtitle": "Parcourez toutes les categories pour trouver l'outil IA ideal.",
+    "allTools": "Tous les outils IA",
+    "filterBy": "Filtrer par"
+  },
+  "compare": {
+    "title": "Comparer les outils IA",
+    "selectTools": "Selectionnez 2-3 outils a comparer",
+    "feature": "Fonctionnalite",
+    "noSelection": "Aucun outil selectionne"
+  },
+  "search": {
+    "placeholder": "Rechercher parmi 5000+ outils IA...",
+    "noResults": "Aucun resultat",
+    "trending": "Tendances"
+  },
+  "auth": {
+    "signIn": "Se connecter",
+    "signUp": "S'inscrire",
+    "signInWithGoogle": "Continuer avec Google",
+    "orEmail": "Ou par email",
+    "email": "Email",
+    "password": "Mot de passe",
+    "forgotPassword": "Mot de passe oublie ?",
+    "noAccount": "Pas encore de compte ?",
+    "hasAccount": "Deja un compte ?",
+    "freeAccount": "Creer un compte gratuit",
+    "benefit": "Obtenez 5 recommandations IA par heure"
+  },
+  "enterprise": {
+    "title": "Integration IA pour votre entreprise",
+    "subtitle": "Omniscient SARL accompagne les entreprises dans l'integration d'outils IA",
+    "cta": "Demarrer votre transformation IA",
+    "services": [
+      "Selection et integration d'outils IA sur-mesure",
+      "Automatisation des workflows avec l'IA",
+      "Formation de vos equipes aux outils IA",
+      "Support continu et optimisation"
+    ]
+  },
+  "submit": {
+    "title": "Soumettre votre outil IA",
+    "subtitle": "Soyez reference sur OmniTool et touchez des milliers d'utilisateurs",
+    "name": "Nom de l'outil",
+    "url": "URL du site",
+    "description": "Description",
+    "yourName": "Votre nom",
+    "yourEmail": "Votre email",
+    "send": "Soumettre",
+    "success": "Merci ! Nous examinerons votre soumission rapidement."
+  },
+  "footer": {
+    "builtBy": "OmniTool est un projet d'",
+    "omniscient": "Omniscient SARL",
+    "legal": "Mentions legales",
+    "privacy": "Politique de confidentialite",
+    "terms": "CGU",
+    "contact": "Contact"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue",
+    "retry": "Reessayer",
+    "close": "Fermer",
+    "back": "Retour",
+    "next": "Suivant",
+    "save": "Enregistrer",
+    "cancel": "Annuler"
+  },
+  "omniskills": {
+    "title": "De quel skill IA as-tu besoin ?",
+    "subtitle": "Decris ton besoin. OmniSkills te recommande les meilleurs skills Claude en quelques secondes.",
+    "placeholder": "Decris ce que tu veux automatiser...",
+    "heroSkills": [
+      "Generer du code React automatiquement",
+      "Analyser des donnees CSV en un clic",
+      "Rediger des emails professionnels",
+      "Automatiser les revues de code",
+      "Creer des tests unitaires",
+      "Resumer des documents PDF",
+      "Generer de la documentation technique",
+      "Traduire du code entre langages"
+    ],
+    "allSkills": "Tous les skills",
+    "popularSkills": "Skills populaires",
+    "newSkills": "Nouveaux skills",
+    "categories": "Categories",
+    "favorites": "Favoris",
+    "search": "Rechercher un skill",
+    "submit": "Soumettre un skill",
+    "installCount": "installations",
+    "viewSkill": "Voir le skill",
+    "author": "Auteur",
+    "backToOmniTool": "Retour a OmniTool",
+    "chatPlaceholder": "Decris ce que tu veux faire...",
+    "chatDefaultReply": "Voici les skills que je te recommande :",
+    "chatSignUpPrompt": "Connecte-toi pour poser plus de questions",
+    "chatLimitReached": "Limite atteinte. Reessaie dans quelques minutes.",
+    "suggestedQuestions": [
+      "Je veux automatiser mes revues de code",
+      "J'ai besoin d'un skill pour analyser des donnees",
+      "Je cherche un skill pour generer de la doc",
+      "Comment automatiser mes tests ?"
+    ]
+  }
+}
