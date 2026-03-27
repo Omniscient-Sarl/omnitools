@@ -5,72 +5,72 @@ import { useLocale } from "next-intl"
 
 const phrases: Record<string, string[]> = {
   en: [
-    "Generate product images with AI",
-    "Transcribe meetings automatically",
-    "Write marketing copy in seconds",
-    "Build a chatbot for your site",
-    "Clone any voice with AI",
-    "Automate your email campaigns",
-    "Create videos from text prompts",
-    "Translate content in 100+ languages",
-    "Analyze data with natural language",
-    "Design logos and brand assets",
-    "Generate code from descriptions",
-    "Summarize long documents instantly",
-    "Create music with AI composers",
-    "Remove backgrounds from photos",
-    "Build no-code AI workflows",
+    "Best AI tool to edit my videos?",
+    "I need to transcribe meetings",
+    "What AI writes marketing copy?",
+    "Find me a chatbot builder",
+    "Tool to clone voices?",
+    "Automate my email campaigns",
+    "AI to create videos from text?",
+    "Best translator for 100+ languages",
+    "Analyze my data with AI",
+    "AI tool for logo design?",
+    "Generate code from a description",
+    "Summarize my PDFs quickly",
+    "AI music generator?",
+    "Remove photo backgrounds",
+    "No-code AI workflow tool?",
   ],
   fr: [
-    "Generer des images produit avec l'IA",
-    "Transcrire des reunions automatiquement",
-    "Rediger du contenu marketing en secondes",
-    "Creer un chatbot pour votre site",
-    "Cloner n'importe quelle voix avec l'IA",
-    "Automatiser vos campagnes email",
-    "Creer des videos a partir de texte",
-    "Traduire du contenu en 100+ langues",
-    "Analyser des donnees en langage naturel",
-    "Designer des logos et identites visuelles",
-    "Generer du code a partir de descriptions",
-    "Resumer des documents longs instantanement",
-    "Composer de la musique avec l'IA",
-    "Supprimer les arriere-plans des photos",
-    "Construire des workflows IA no-code",
+    "Meilleur outil IA pour monter mes videos ?",
+    "Je dois transcrire des reunions",
+    "Quelle IA redige du contenu marketing ?",
+    "Trouve-moi un createur de chatbot",
+    "Outil pour cloner des voix ?",
+    "Automatiser mes campagnes email",
+    "IA pour creer des videos depuis du texte ?",
+    "Meilleur traducteur 100+ langues",
+    "Analyser mes donnees avec l'IA",
+    "Outil IA pour creer un logo ?",
+    "Generer du code depuis une description",
+    "Resumer mes PDF rapidement",
+    "Generateur de musique IA ?",
+    "Supprimer le fond de mes photos",
+    "Outil workflow IA no-code ?",
   ],
   ja: [
-    "AIで商品画像を生成する",
-    "会議を自動で文字起こしする",
-    "数秒でマーケティングコピーを作成",
-    "サイト用チャットボットを構築",
-    "AIで音声をクローンする",
-    "メールキャンペーンを自動化",
-    "テキストから動画を作成",
-    "100以上の言語に翻訳",
-    "自然言語でデータを分析",
-    "ロゴやブランド素材をデザイン",
-    "説明文からコードを生成",
-    "長い文書を瞬時に要約",
-    "AIで音楽を作曲",
-    "写真の背景を削除",
-    "ノーコードAIワークフローを構築",
+    "動画編集に最適なAIツールは？",
+    "会議の文字起こしがしたい",
+    "マーケティング文章を書くAIは？",
+    "チャットボット作成ツールを探して",
+    "音声クローンツールは？",
+    "メールキャンペーンを自動化したい",
+    "テキストから動画を作るAIは？",
+    "100言語以上の翻訳ツール",
+    "AIでデータ分析したい",
+    "ロゴデザインのAIツールは？",
+    "説明文からコードを生成したい",
+    "PDFを素早く要約したい",
+    "AI音楽ジェネレーターは？",
+    "写真の背景を消したい",
+    "ノーコードAIワークフローツール？",
   ],
   zh: [
-    "用AI生成产品图片",
-    "自动转录会议内容",
-    "秒速撰写营销文案",
-    "为网站创建聊天机器人",
-    "用AI克隆任何声音",
-    "自动化邮件营销",
-    "从文字生成视频",
-    "翻译100多种语言",
-    "用自然语言分析数据",
-    "设计Logo和品牌素材",
+    "最好的AI视频编辑工具？",
+    "我需要转录会议内容",
+    "哪个AI能写营销文案？",
+    "帮我找个聊天机器人工具",
+    "有克隆声音的工具吗？",
+    "自动化我的邮件营销",
+    "从文字生成视频的AI？",
+    "最好的100+语言翻译器",
+    "用AI分析我的数据",
+    "AI设计Logo工具？",
     "从描述生成代码",
-    "即时总结长文档",
-    "用AI作曲",
-    "移除照片背景",
-    "构建无代码AI工作流",
+    "快速总结我的PDF",
+    "AI音乐生成器？",
+    "去除照片背景",
+    "无代码AI工作流工具？",
   ],
 }
 
@@ -119,15 +119,18 @@ export function RotatingHero() {
         />
       </svg>
 
-      {/* Rotating text */}
+      {/* Rotating text — clickable to send to AskOmni */}
       <div className="absolute inset-0 flex items-center justify-center px-8">
-        <p
-          className={`text-center text-lg md:text-xl font-medium transition-all duration-500 ${
+        <button
+          onClick={() => {
+            window.dispatchEvent(new CustomEvent("open-askomni", { detail: { question: localePhrases[currentIndex] } }))
+          }}
+          className={`text-center text-lg md:text-xl font-medium transition-all duration-500 cursor-pointer hover:text-primary ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
           }`}
         >
           {localePhrases[currentIndex]}
-        </p>
+        </button>
       </div>
     </div>
   )
