@@ -1,14 +1,20 @@
 import OpenAI from "openai"
 
-// OpenRouter with Groq provider for Llama 3.1 8B
-const openrouter = new OpenAI({
-  baseURL: "https://openrouter.ai/api/v1",
-  apiKey: process.env.OPENROUTER_API_KEY,
-  defaultHeaders: {
-    "HTTP-Referer": "https://omnitool.ai",
-    "X-Title": "OmniTool",
-  },
-})
+// OpenRouter with Groq provider for Llama 3.1 8B (lazy singleton)
+let _openrouter: OpenAI | null = null
+function getOpenRouter() {
+  if (!_openrouter) {
+    _openrouter = new OpenAI({
+      baseURL: "https://openrouter.ai/api/v1",
+      apiKey: process.env.OPENROUTER_API_KEY,
+      defaultHeaders: {
+        "HTTP-Referer": "https://omnitool.ai",
+        "X-Title": "OmniTool",
+      },
+    })
+  }
+  return _openrouter
+}
 
 const LLM_MODEL = "meta-llama/llama-3.1-8b-instruct"
 
@@ -113,7 +119,7 @@ ${toolsContext}
 IMPORTANT: Reply ONLY as valid JSON. No markdown, no extra text.
 Format: {"message":"brief intro sentence","recommendations":[{"name":"Tool Name","slug":"tool-slug","reason":"1 sentence why"}]}`
 
-  const completion = await openrouter.chat.completions.create({
+  const completion = await getOpenRouter().chat.completions.create({
     model: LLM_MODEL,
     messages: [
       { role: "system", content: systemPrompt },

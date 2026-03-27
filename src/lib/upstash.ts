@@ -2,25 +2,45 @@ import { Redis } from "@upstash/redis"
 import { Ratelimit } from "@upstash/ratelimit"
 import { createHash } from "crypto"
 
-// Redis client
-export const redis = new Redis({
-  url: process.env.UPSTASH_REDIS_REST_URL!,
-  token: process.env.UPSTASH_REDIS_REST_TOKEN!,
-})
+// Lazy singletons to avoid build-time crashes when env vars are missing
+let _redis: Redis | null = null
+function getRedis() {
+  if (!_redis) {
+    _redis = new Redis({
+      url: process.env.UPSTASH_REDIS_REST_URL!,
+      token: process.env.UPSTASH_REDIS_REST_TOKEN!,
+    })
+  }
+  return _redis
+}
 
-// Rate limiter: 5 requests per hour for authenticated users
-export const authenticatedLimiter = new Ratelimit({
-  redis,
-  limiter: Ratelimit.slidingWindow(5, "1 h"),
-  prefix: "ratelimit:auth",
-})
+let _authLimiter: Ratelimit | null = null
+export const authenticatedLimiter = {
+  get limit() {
+    if (!_authLimiter) {
+      _authLimiter = new Ratelimit({
+        redis: getRedis(),
+        limiter: Ratelimit.slidingWindow(5, "1 h"),
+        prefix: "ratelimit:auth",
+      })
+    }
+    return _authLimiter.limit.bind(_authLimiter)
+  },
+}
 
-// Rate limiter: 1 request total for anonymous users (per IP)
-export const anonymousLimiter = new Ratelimit({
-  redis,
-  limiter: Ratelimit.slidingWindow(1, "24 h"),
-  prefix: "ratelimit:anon",
-})
+let _anonLimiter: Ratelimit | null = null
+export const anonymousLimiter = {
+  get limit() {
+    if (!_anonLimiter) {
+      _anonLimiter = new Ratelimit({
+        redis: getRedis(),
+        limiter: Ratelimit.slidingWindow(1, "24 h"),
+        prefix: "ratelimit:anon",
+      })
+    }
+    return _anonLimiter.limit.bind(_anonLimiter)
+  },
+}
 
 // Cache helpers
 function getCacheKey(question: string): string {
@@ -30,10 +50,10 @@ function getCacheKey(question: string): string {
 
 export async function getCachedResponse(question: string): Promise<string | null> {
   const key = getCacheKey(question)
-  return redis.get<string>(key)
+  return getRedis().get<string>(key)
 }
 
 export async function setCachedResponse(question: string, response: string): Promise<void> {
   const key = getCacheKey(question)
-  await redis.set(key, response, { ex: 3600 }) // 1 hour TTL
+  await getRedis().set(key, response, { ex: 3600 }) // 1 hour TTL
 }
