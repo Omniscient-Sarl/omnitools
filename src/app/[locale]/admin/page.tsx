@@ -23,12 +23,18 @@ export default function AdminPage() {
   const [password, setPassword] = useState("")
   const [authenticated, setAuthenticated] = useState(false)
 
-  // Simple password protection (not production-grade, but functional)
-  const ADMIN_PASSWORD = "omniscient2025"
-
   function handleLogin(e: React.FormEvent) {
     e.preventDefault()
-    if (password === ADMIN_PASSWORD) {
+    verifyPassword()
+  }
+
+  async function verifyPassword() {
+    const res = await fetch("/api/admin/verify", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ password }),
+    })
+    if (res.ok) {
       setAuthenticated(true)
       fetchSubmissions()
     }
