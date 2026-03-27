@@ -1,6 +1,9 @@
 import { getServiceClient } from "@/lib/supabase/service"
 import type { MetadataRoute } from "next"
 
+// Generate sitemap at runtime, not build time (needs DB access)
+export const dynamic = "force-dynamic"
+
 const BASE_URL = "https://omnitool.ai"
 
 const locales = ["en", "fr", "ja", "zh"]
