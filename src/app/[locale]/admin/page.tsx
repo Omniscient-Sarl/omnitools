@@ -22,21 +22,29 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(true)
   const [password, setPassword] = useState("")
   const [authenticated, setAuthenticated] = useState(false)
+  const [error, setError] = useState("")
 
   function handleLogin(e: React.FormEvent) {
     e.preventDefault()
+    setError("")
     verifyPassword()
   }
 
   async function verifyPassword() {
-    const res = await fetch("/api/admin/verify", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ password }),
-    })
-    if (res.ok) {
-      setAuthenticated(true)
-      fetchSubmissions()
+    try {
+      const res = await fetch("/api/admin/verify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password }),
+      })
+      if (res.ok) {
+        setAuthenticated(true)
+        fetchSubmissions()
+      } else {
+        setError("Wrong password")
+      }
+    } catch {
+      setError("Connection error")
     }
   }
 
@@ -83,6 +91,7 @@ export default function AdminPage() {
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
               />
               <Button type="submit">Login</Button>
+              {error && <p className="text-sm text-destructive text-center">{error}</p>}
             </form>
           </CardContent>
         </Card>
