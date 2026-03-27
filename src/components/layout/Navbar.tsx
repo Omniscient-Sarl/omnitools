@@ -31,7 +31,7 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <Link href="/" className="flex items-center">
             <span className="text-2xl font-bold tracking-tight">
-              Omni<span className="text-primary">Tool</span>
+              Omni<span className="text-primary">Tools</span>
             </span>
           </Link>
           <Link

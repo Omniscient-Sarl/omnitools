@@ -9,7 +9,7 @@ function getOpenRouter() {
       apiKey: process.env.OPENROUTER_API_KEY,
       defaultHeaders: {
         "HTTP-Referer": "https://omnitool.ai",
-        "X-Title": "OmniTool",
+        "X-Title": "OmniToolss",
       },
     })
   }
@@ -53,10 +53,10 @@ const ENTERPRISE_KEYWORDS = [
 
 // Off-topic detection: only answer AI tool questions
 const OFF_TOPIC_RESPONSES: Record<string, string> = {
-  fr: "Je suis l'assistant OmniTool, specialise dans les outils IA. Pose-moi une question sur les outils IA et je te recommanderai les meilleurs !",
-  en: "I'm OmniTool's assistant, specialized in AI tools. Ask me about AI tools and I'll recommend the best ones!",
-  ja: "私はOmniToolのAIツール専門アシスタントです。AIツールについて聞いてください！",
-  zh: "我是OmniTool的AI工具助手。请问我关于AI工具的问题！",
+  fr: "Je suis l'assistant OmniTools, specialise dans les outils IA. Pose-moi une question sur les outils IA et je te recommanderai les meilleurs !",
+  en: "I'm OmniTools's assistant, specialized in AI tools. Ask me about AI tools and I'll recommend the best ones!",
+  ja: "私はOmniToolsのAIツール専門アシスタントです。AIツールについて聞いてください！",
+  zh: "我是OmniTools的AI工具助手。请问我关于AI工具的问题！",
 }
 
 function isOffTopic(question: string): boolean {
@@ -108,7 +108,7 @@ export async function chatWithTools(
 
   const lang: Record<string, string> = { fr: "French", en: "English", ja: "Japanese", zh: "Chinese" }
 
-  const systemPrompt = `You are OmniTool's AI assistant. You ONLY recommend AI tools from the list below. You NEVER answer questions unrelated to AI tools. If a user asks anything off-topic, reply: "I can only help with AI tool recommendations."
+  const systemPrompt = `You are OmniTools's AI assistant. You ONLY recommend AI tools from the list below. You NEVER answer questions unrelated to AI tools. If a user asks anything off-topic, reply: "I can only help with AI tool recommendations."
 
 Reply in ${lang[locale] || "English"}.
 You MUST recommend EXACTLY 3 tools. Pick the 3 most relevant from the list. For each, explain in 1 sentence why it fits. Even if only 1 tool seems perfect, still pick 2 more that could help.

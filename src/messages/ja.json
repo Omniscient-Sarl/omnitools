@@ -14,7 +14,7 @@
   },
   "hero": {
     "title": "どんなAIが必要ですか？",
-    "subtitle": "プロジェクトを説明してください。OmniToolが最適なAIツールを数秒で提案します。",
+    "subtitle": "プロジェクトを説明してください。OmniToolsが最適なAIツールを数秒で提案します。",
     "placeholder": "プロジェクトについて教えてください...",
     "cta": "ツールを探す"
   },
@@ -94,7 +94,7 @@
   },
   "submit": {
     "title": "AIツールを登録",
-    "subtitle": "OmniToolに掲載して数千人のユーザーにリーチ",
+    "subtitle": "OmniToolsに掲載して数千人のユーザーにリーチ",
     "name": "ツール名",
     "url": "ウェブサイトURL",
     "description": "説明",
@@ -104,7 +104,7 @@
     "success": "ありがとうございます！すぐに確認いたします。"
   },
   "footer": {
-    "builtBy": "OmniToolは",
+    "builtBy": "OmniToolsは",
     "omniscient": "Omniscient SARL",
     "legal": "法的情報",
     "privacy": "プライバシーポリシー",
@@ -145,7 +145,7 @@
     "installCount": "インストール",
     "viewSkill": "スキルを見る",
     "author": "作成者",
-    "backToOmniTool": "OmniToolに戻る",
+    "backToOmniTools": "OmniToolsに戻る",
     "chatPlaceholder": "やりたいことを説明してください...",
     "chatDefaultReply": "おすすめのスキルはこちらです：",
     "chatSignUpPrompt": "もっと質問するにはサインイン",

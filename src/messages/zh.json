@@ -14,7 +14,7 @@
   },
   "hero": {
     "title": "你需要什么AI？",
-    "subtitle": "描述你的项目。OmniTool几秒内为你推荐最佳AI工具。",
+    "subtitle": "描述你的项目。OmniTools几秒内为你推荐最佳AI工具。",
     "placeholder": "描述你的项目...",
     "cta": "找到我的工具"
   },
@@ -94,7 +94,7 @@
   },
   "submit": {
     "title": "提交你的AI工具",
-    "subtitle": "在OmniTool上展示，触达数千潜在用户",
+    "subtitle": "在OmniTools上展示，触达数千潜在用户",
     "name": "工具名称",
     "url": "网站URL",
     "description": "描述",
@@ -104,7 +104,7 @@
     "success": "谢谢！我们会尽快审核您的提交。"
   },
   "footer": {
-    "builtBy": "OmniTool 是",
+    "builtBy": "OmniTools 是",
     "omniscient": "Omniscient SARL",
     "legal": "法律信息",
     "privacy": "隐私政策",
@@ -145,7 +145,7 @@
     "installCount": "次安装",
     "viewSkill": "查看技能",
     "author": "作者",
-    "backToOmniTool": "返回OmniTool",
+    "backToOmniTools": "返回OmniTools",
     "chatPlaceholder": "描述你想做什么...",
     "chatDefaultReply": "以下是我推荐的技能：",
     "chatSignUpPrompt": "登录以提问更多问题",

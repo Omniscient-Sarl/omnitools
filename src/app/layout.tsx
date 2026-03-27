@@ -3,8 +3,8 @@ import "./globals.css"
 
 export const metadata: Metadata = {
   title: {
-    default: "OmniTool - AI Tools Directory | Find the Best AI Tools",
-    template: "%s | OmniTool",
+    default: "OmniTools - AI Tools Directory | Find the Best AI Tools",
+    template: "%s | OmniTools",
   },
   description:
     "Discover 5000+ AI tools with smart recommendations. Describe your project and get personalized AI tool suggestions in seconds. By Omniscient SARL.",
@@ -24,14 +24,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://omnitool.ai",
-    siteName: "OmniTool",
-    title: "OmniTool - Find the Best AI Tools for Your Project",
+    siteName: "OmniTools",
+    title: "OmniTools - Find the Best AI Tools for Your Project",
     description:
       "Discover 5000+ AI tools with smart recommendations. Describe your project and get personalized suggestions.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "OmniTool - AI Tools Directory",
+    title: "OmniTools - AI Tools Directory",
     description: "Find the best AI tools for your project. Smart recommendations powered by AI.",
   },
   robots: {

@@ -14,7 +14,7 @@
   },
   "hero": {
     "title": "De quelle IA as-tu besoin ?",
-    "subtitle": "Decris ton projet. OmniTool te recommande les meilleurs outils IA en quelques secondes.",
+    "subtitle": "Decris ton projet. OmniTools te recommande les meilleurs outils IA en quelques secondes.",
     "placeholder": "Decris ton projet...",
     "cta": "Trouver mes outils"
   },
@@ -94,7 +94,7 @@
   },
   "submit": {
     "title": "Soumettre votre outil IA",
-    "subtitle": "Soyez reference sur OmniTool et touchez des milliers d'utilisateurs",
+    "subtitle": "Soyez reference sur OmniTools et touchez des milliers d'utilisateurs",
     "name": "Nom de l'outil",
     "url": "URL du site",
     "description": "Description",
@@ -104,7 +104,7 @@
     "success": "Merci ! Nous examinerons votre soumission rapidement."
   },
   "footer": {
-    "builtBy": "OmniTool est un projet d'",
+    "builtBy": "OmniTools est un projet d'",
     "omniscient": "Omniscient SARL",
     "legal": "Mentions legales",
     "privacy": "Politique de confidentialite",
@@ -145,7 +145,7 @@
     "installCount": "installations",
     "viewSkill": "Voir le skill",
     "author": "Auteur",
-    "backToOmniTool": "Retour a OmniTool",
+    "backToOmniTool": "Retour a OmniTools",
     "chatPlaceholder": "Decris ce que tu veux faire...",
     "chatDefaultReply": "Voici les skills que je te recommande :",
     "chatSignUpPrompt": "Connecte-toi pour poser plus de questions",

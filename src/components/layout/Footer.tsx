@@ -13,7 +13,7 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2 lg:col-span-1">
             <span className="text-xl font-bold">
-              Omni<span className="text-primary">Tool</span>
+              Omni<span className="text-primary">Tools</span>
             </span>
             <p className="mt-2 text-sm text-muted-foreground">
               {t("builtBy")}{" "}
@@ -75,7 +75,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} OmniTool &middot;{" "}
+          &copy; {new Date().getFullYear()} OmniTools &middot;{" "}
           <a
             href="https://omniscient.swiss"
             target="_blank"
