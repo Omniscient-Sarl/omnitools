@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from "next/server"
 import { getServiceClient } from "@/lib/supabase/service"
 
 const PH_API_URL = "https://api.producthunt.com/v2/api/graphql"
-const PH_TOKEN = process.env.PRODUCTHUNT_API_TOKEN!
 
 const QUERY = `
 query GetNewAIProducts($cursor: String) {
@@ -63,7 +62,7 @@ export async function GET(request: NextRequest) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${PH_TOKEN}`,
+        Authorization: `Bearer ${process.env.PRODUCTHUNT_API_TOKEN}`,
       },
       body: JSON.stringify({ query: QUERY, variables: { cursor: null } }),
     })

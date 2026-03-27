@@ -4,10 +4,16 @@ import { createOmniskillsServiceClient } from "@/lib/supabase/omniskills-server"
 import { authenticatedLimiter, anonymousLimiter, getCachedResponse, setCachedResponse } from "@/lib/upstash"
 import OpenAI from "openai"
 
-const openrouter = new OpenAI({
-  baseURL: "https://openrouter.ai/api/v1",
-  apiKey: process.env.OPENROUTER_API_KEY,
-})
+let _openrouter: OpenAI | null = null
+function getOpenRouter() {
+  if (!_openrouter) {
+    _openrouter = new OpenAI({
+      baseURL: "https://openrouter.ai/api/v1",
+      apiKey: process.env.OPENROUTER_API_KEY,
+    })
+  }
+  return _openrouter
+}
 
 function sanitize(input: string): string {
   return input
@@ -81,7 +87,7 @@ Format your response as JSON:
 Available skills:
 ${skillsContext || "No skills available yet. Tell the user to check back soon."}`
 
-    const completion = await openrouter.chat.completions.create({
+    const completion = await getOpenRouter().chat.completions.create({
       model: "meta-llama/llama-3.1-8b-instruct",
       messages: [
         { role: "system", content: systemPrompt },
